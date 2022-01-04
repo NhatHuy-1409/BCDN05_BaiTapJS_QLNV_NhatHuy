@@ -99,6 +99,7 @@ function xemNhanVien(taiKhoan) {
     if (viTri != -1) {
         nv = dsnv.mangNV[viTri];
         getEle("tknv").value = nv.taiKhoan;
+        getEle("tknv").disabled = true;
         getEle("name").value = nv.hoTen;
         getEle("email").value = nv.email;
         getEle("password").value = nv.matKhau;
@@ -136,6 +137,8 @@ function capNhatNV() {
 //Reser form
 function resetForm() {
     getEle("formQLNV").reset();
+    getEle("tknv").disabled = false;
+
 }
 //Tìm kiếm theo loại nhân viên
 function searchLoaiNV() {
